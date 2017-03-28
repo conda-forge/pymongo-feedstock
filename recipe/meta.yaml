@@ -1,12 +1,13 @@
+{% set name = "pymongo" %}
 {% set version = "3.2.2" %}
 
 package:
-  name: pymongo
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/mongodb/mongo-python-driver/archive/{{ version }}.tar.gz
-  fn: pymongo-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
   sha256: cdea2a973f943c67d2f417a74e84e0332e6ce65cc9de80ff318e7ab525696a9e
 
 build:
@@ -33,6 +34,8 @@ about:
   home: https://github.com/mongodb/mongo-python-driver
   license: Apache 2.0
   summary: Python driver for MongoDB http://www.mongodb.org
+  dev_url: https://github.com/mongodb/mongo-python-driver
+  doc_url: http://api.mongodb.com/python/3.2.2/
 
 extra:
   recipe-maintainers:
