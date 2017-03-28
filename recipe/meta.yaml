@@ -26,9 +26,6 @@ test:
     - bson
     - gridfs
     - pymongo
-  requires:  # [not win]
-    - mongodb  # [not win]
-    - setuptools  # [not win]
 
 about:
   home: https://github.com/mongodb/mongo-python-driver
