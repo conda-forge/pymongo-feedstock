@@ -21,7 +21,7 @@ requirements:
 
   run:
     - python
-    - ipadress  # [py2k]
+    - ipaddress  # [py2k]
     - wincertstore >=0.2  # [win32]
     - pykerberos  # [not win32]
 
