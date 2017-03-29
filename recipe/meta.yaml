@@ -29,8 +29,10 @@ test:
 
 about:
   home: https://github.com/mongodb/mongo-python-driver
+  license_file: LICENSE
   license: Apache 2.0
-  summary: Python driver for MongoDB http://www.mongodb.org
+  license_family: Apache
+  summary: 'Python driver for MongoDB'
   dev_url: https://github.com/mongodb/mongo-python-driver
   doc_url: http://api.mongodb.com/python/3.4.0/
 
