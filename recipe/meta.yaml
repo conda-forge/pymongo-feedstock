@@ -22,7 +22,7 @@ requirements:
 
 test:
   source_files:
-    - *
+    - *.*
   imports:
     - bson
     - gridfs
