@@ -22,7 +22,8 @@ requirements:
 
 test:
   source_files:
-    - *.*
+    - setup.py
+    - test/
   imports:
     - bson
     - gridfs
