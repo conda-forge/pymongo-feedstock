@@ -1,5 +1,8 @@
 #!/bin/bash
 
+unset REQUESTS_CA_BUNDLE
+unset SSL_CERT_FILE
+
 export DB_PATH="$SRC_DIR/temp-mongo-db"
 export LOG_PATH="$SRC_DIR/mongolog"
 export DB_PORT=27272
