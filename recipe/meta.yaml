@@ -22,6 +22,8 @@ requirements:
     - python
 
 test:
+  # Tests are timing out on Travis for some reason
+  run_test.sh  # [linux]
   source_files:
     - .
   imports:
