@@ -1,6 +1,6 @@
 #!/bin/bash
 # We don't run on OSX the full tests due to timeout errors
-# See https://travis-ci.org/conda-forge/pymongo-feedstock/builds/311631125?utm_source=github_status&utm_medium=notification
+# See https://travis-ci.org/conda-forge/pymongo-feedstock/builds/311631125
 if [ "$(uname)" == "Darwin" and "$(CI)" == true ]; then
     :
 else
