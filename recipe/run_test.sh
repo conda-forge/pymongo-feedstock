@@ -1,7 +1,7 @@
 #!/bin/bash
 # We don't run on OSX the full tests due to timeout errors
 # See https://travis-ci.org/conda-forge/pymongo-feedstock/builds/311631125
-if [ "$(uname)" == "Darwin" and "$(travis)" ]; then
+if [ "$(uname)" == "Darwin" and "$(TRAVIS)" == true ]; then
     :
 else
     unset REQUESTS_CA_BUNDLE
