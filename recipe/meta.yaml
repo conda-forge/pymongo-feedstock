@@ -1,4 +1,4 @@
-{% set version = "3.2.2" %}
+{% set version = "3.6.0" %}
 
 package:
   name: pymongo
@@ -7,7 +7,7 @@ package:
 source:
   url: https://github.com/mongodb/mongo-python-driver/archive/{{ version }}.tar.gz
   fn: pymongo-{{ version }}.tar.gz
-  sha256: cdea2a973f943c67d2f417a74e84e0332e6ce65cc9de80ff318e7ab525696a9e
+  sha256: debc766ac3f672fb9bcbf7b4b1276c538ec23fead193bace10702ee3cdc65d6d
 
 build:
   number: 0
@@ -21,6 +21,10 @@ requirements:
     - setuptools
   run:
     - python
+    - pykerberos
+    - dnspython >=1.8.0,<2.0.0
+    - ipaddress
+    - certifi
 
 test:
   source_files:
