@@ -10,7 +10,7 @@ source:
   sha256: ee0b87c4b5b9824b5c409c480dcd4c62b25b8000f132c7fcca874453523dbc3e
 
 build:
-  number: 0
+  number: 1000
   script: python setup.py install --single-version-externally-managed --record=record.txt
   script_env:  # [osx]
     - TRAVIS   # [osx]
