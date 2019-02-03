@@ -1,4 +1,4 @@
-{% set version = "3.7.1" %}
+{% set version = "3.7.2" %}
 
 package:
   name: pymongo
@@ -7,10 +7,10 @@ package:
 source:
   url: https://github.com/mongodb/mongo-python-driver/archive/{{ version }}.tar.gz
   fn: pymongo-{{ version }}.tar.gz
-  sha256: ee0b87c4b5b9824b5c409c480dcd4c62b25b8000f132c7fcca874453523dbc3e
+  sha256: a4c564613d76cf78561f777d24dc729885ccf72c40c8ed553b81541c18ec1ed6
 
 build:
-  number: 1000
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
   script_env:  # [osx]
     - TRAVIS   # [osx]
