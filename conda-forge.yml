@@ -8,3 +8,4 @@ travis:
 provider:
   win: azure
   linux_ppc64le: default
+conda_forge_output_validation: true
