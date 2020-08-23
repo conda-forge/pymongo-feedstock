@@ -1,7 +1,7 @@
 #!/bin/bash
-# We don't run on OSX the full tests due to timeout errors
-# See https://travis-ci.org/conda-forge/pymongo-feedstock/builds/311631125
-if [ "${TRAVIS}" != true ]; then
+# We don't run on PPC64LE + PYPY the full tests due to legacy errors
+# https://github.com/conda-forge/pymongo-feedstock/pull/33
+if [ "${SKIP_TESTS}" != true ]; then
     unset REQUESTS_CA_BUNDLE
     unset SSL_CERT_FILE
 
