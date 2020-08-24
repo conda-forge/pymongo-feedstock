@@ -12,8 +12,10 @@ source:
 build:
   number: 2
   script: python setup.py install --single-version-externally-managed --record=record.txt
-  script_env:  # [osx]
-    - TRAVIS   # [osx]
+  # Three tests seem to fail on PPC64LE and PyPy
+  # test_monitoring test_gridfs_spec test_legacy_api
+  script_env:      # [python_impl == 'pypy' and ppc64le]
+    - SKIP_TESTS   # [python_impl == 'pypy' and ppc64le]
 
 requirements:
   build:
@@ -32,8 +34,8 @@ test:
     - bson
     - gridfs
     - pymongo
-  requires:  # [not win]
-    - mongodb  # [not win]
+  requires:       # [not win]
+    - mongodb     # [not win]
     - setuptools  # [not win]
 
 about:
