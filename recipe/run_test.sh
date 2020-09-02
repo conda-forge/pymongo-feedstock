@@ -4,7 +4,7 @@ set -e
 # https://github.com/conda-forge/pymongo-feedstock/pull/33
 echo ${target_platform}
 echo ${python_impl}
-if [ "${target_platform}" == "linux-ppc64le" ] and [ "${python_impl}" == "pypy" ]; then
+if [ "${target_platform}" == "linux-ppc64le" ] && [ "${python_impl}" == "pypy" ]; then
     unset REQUESTS_CA_BUNDLE
     unset SSL_CERT_FILE
 
