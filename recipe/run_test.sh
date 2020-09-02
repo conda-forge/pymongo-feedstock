@@ -1,7 +1,10 @@
 #!/bin/bash
+set -e
 # We don't run on PPC64LE + PYPY the full tests due to legacy errors
 # https://github.com/conda-forge/pymongo-feedstock/pull/33
-if [ "${SKIP_TESTS}" != true ]; then
+echo ${target_platform}
+echo ${python_impl}
+if [ "${target_platform}" == "linux-ppc64le" ] and [ "${python_impl}" == "pypy" ]; then
     unset REQUESTS_CA_BUNDLE
     unset SSL_CERT_FILE
 
