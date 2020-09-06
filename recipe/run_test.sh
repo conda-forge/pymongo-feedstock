@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 # We don't run on PPC64LE + PYPY the full tests due to legacy errors
 # https://github.com/conda-forge/pymongo-feedstock/pull/33
 echo ${target_platform}
