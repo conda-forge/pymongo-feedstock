@@ -3,7 +3,7 @@ About pymongo
 
 Home: https://github.com/mongodb/mongo-python-driver
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymongo-feedstock/blob/master/LICENSE.txt)
 
