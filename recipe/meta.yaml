@@ -6,12 +6,14 @@ package:
 
 source:
   url: https://github.com/mongodb/mongo-python-driver/archive/{{ version }}.tar.gz
-  fn: pymongo-{{ version }}.tar.gz
   sha256: e45b318c56f5f385635df06685104ae22f3c9977addaa2dad0d1dc94f31f20c7
+  patches:
+    # https://github.com/mongodb/mongo-python-driver/pull/485/
+    - python-3.9.diff
 
 build:
-  number: 3
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 4
+  script: python -m pip install . -vv
   # Three tests seem to fail on PPC64LE and PyPy
   # test_monitoring test_gridfs_spec test_legacy_api
   script_env:
@@ -24,6 +26,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
+    - pip
     - setuptools
   run:
     - python
@@ -45,7 +48,7 @@ test:
 
 about:
   home: https://github.com/mongodb/mongo-python-driver
-  license: Apache 2.0
+  license: Apache-2.0
   license_file: LICENSE
   summary: Python driver for MongoDB http://www.mongodb.org
 
