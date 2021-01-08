@@ -12,7 +12,7 @@ source:
     - python-3.9.diff
 
 build:
-  number: 4
+  number: 5
   script: python -m pip install . -vv
   # Three tests seem to fail on PPC64LE and PyPy
   # test_monitoring test_gridfs_spec test_legacy_api
