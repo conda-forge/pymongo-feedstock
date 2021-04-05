@@ -7,9 +7,6 @@ package:
 source:
   url: https://github.com/mongodb/mongo-python-driver/archive/{{ version }}.tar.gz
   sha256: 0e4c303d4cfd01bb3fec77ddd4560238603ac4fb7ce1717ea7c4a0b65f8cf19f
-  patches:
-    # https://github.com/mongodb/mongo-python-driver/pull/485/
-    - python-3.9.diff
 
 build:
   number: 0
