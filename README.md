@@ -244,6 +244,7 @@ Installing `pymongo` from the `conda-forge` channel can be achieved by adding `c
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `pymongo` can be installed with:
@@ -323,6 +324,7 @@ Feedstock Maintainers
 =====================
 
 * [@CJ-Wright](https://github.com/CJ-Wright/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 * [@licode](https://github.com/licode/)
 * [@tacaswell](https://github.com/tacaswell/)
 
