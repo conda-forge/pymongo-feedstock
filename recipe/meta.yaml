@@ -39,11 +39,11 @@ test:
     - bson
     - gridfs
     - pymongo
-  requires:       # [not win]
+  requires:
     - mongodb     # [not win]
     - setuptools  # [not win]
     - pip
-  commands:                  # [unix and not (ppc64le and python_impl=='pypy')]
+  commands:
     - bash run_the_tests.sh  # [unix and not (ppc64le and python_impl=='pypy')]
     - pip check
 
