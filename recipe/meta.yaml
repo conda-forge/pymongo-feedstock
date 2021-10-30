@@ -1,4 +1,4 @@
-{% set version = "3.12.0" %}
+{% set version = "3.12.1" %}
 
 package:
   name: pymongo
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/mongodb/mongo-python-driver/archive/{{ version }}.tar.gz
-  sha256: c03817fefb4fd36e6bd695525794ec80419d5bd1b577b6ec8ec9957e98f42285
+  sha256: b66587850eecde55ed394f30faa8f737399d27fc692d406e14c5002e7e2afd5c
 
 build:
   number: 0
@@ -44,7 +44,7 @@ test:
     - setuptools  # [not win]
     - pip
   commands:
-    - bash run_the_tests.sh  # [unix and not (ppc64le and python_impl=='pypy')]
+    - bash run_the_tests.sh  # [unix and not (ppc64le or python_impl=='pypy')]
     - pip check
 
 about:
