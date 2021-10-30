@@ -44,7 +44,7 @@ test:
     - setuptools  # [not win]
     - pip
   commands:
-    - bash run_the_tests.sh  # [unix and not (ppc64le and python_impl=='pypy')]
+    - bash run_the_tests.sh  # [unix and not (ppc64le or python_impl=='pypy')]
     - pip check
 
 about:
