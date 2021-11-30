@@ -1,4 +1,4 @@
-{% set version = "3.12.2" %}
+{% set version = "4.0" %}
 
 package:
   name: pymongo
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/mongodb/mongo-python-driver/archive/{{ version }}.tar.gz
-  sha256: c3f8dfabdcdab02fb1cab73e82c7d7b6c2e6021d3bc6c2039f61cb6bf64d9013
+  sha256: b01372667bc2db7f45fd1c17bb66deb6cf7ff904c052c43af71b2173a9d7e82a
 
 build:
   number: 0
