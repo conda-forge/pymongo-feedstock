@@ -283,6 +283,8 @@ Feedstock Maintainers
 =====================
 
 * [@CJ-Wright](https://github.com/CJ-Wright/)
+* [@ShaneHarvey](https://github.com/ShaneHarvey/)
+* [@blink1073](https://github.com/blink1073/)
 * [@jan-janssen](https://github.com/jan-janssen/)
 * [@licode](https://github.com/licode/)
 * [@tacaswell](https://github.com/tacaswell/)
