@@ -1,4 +1,4 @@
-{% set version = "4.1.1" %}
+{% set version = "4.2.0" %}
 
 package:
   name: pymongo
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/mongodb/mongo-python-driver/archive/{{ version }}.tar.gz
-  sha256: d85d46375f284e3d4640b642fb6389631e329bb9b071b69386feef331447c35b
+  sha256: efd44e18a6f16156f8495d7786afbdc3952d1d09cfe9ad022bee3b86a6535e3f
 
 build:
-  number: 1
+  number: 0
   script: python -m pip install . -vv
   # Three tests seem to fail on PPC64LE and PyPy
   # test_monitoring test_gridfs_spec test_legacy_api
