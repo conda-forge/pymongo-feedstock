@@ -9,7 +9,7 @@ source:
   sha256: 95913659d6c5fc714e662533d014836c988cc1561684f07b6a0a8343651afa66
 
 build:
-  number: 0
+  number: 1
   script: python -m pip install . -vv
   # Three tests seem to fail on PPC64LE and PyPy
   # test_monitoring test_gridfs_spec test_legacy_api
