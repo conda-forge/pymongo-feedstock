@@ -1,16 +1,17 @@
-{% set version = "3.12.2" %}
+{% set name = "pymongo" %}
+{% set version = "3.13.0" %}
 
 package:
-  name: pymongo
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/mongodb/mongo-python-driver/archive/{{ version }}.tar.gz
-  sha256: c3f8dfabdcdab02fb1cab73e82c7d7b6c2e6021d3bc6c2039f61cb6bf64d9013
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymongo-{{ version }}.tar.gz
+  sha256: e22d6cf5802cd09b674c307cc9e03870b8c37c503ebec3d25b86f2ce8c535dc7
 
 build:
   number: 0
-  script: python -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv
   # Three tests seem to fail on PPC64LE and PyPy
   # test_monitoring test_gridfs_spec test_legacy_api
   script_env:
