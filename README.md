@@ -1,11 +1,11 @@
-About pymongo
-=============
+About pymongo-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymongo-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/mongodb/mongo-python-driver
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymongo-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python driver for MongoDB http://www.mongodb.org
 
