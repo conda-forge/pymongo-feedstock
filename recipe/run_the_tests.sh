@@ -21,7 +21,8 @@ mkdir "$DB_PATH"
 mongod --dbpath="$DB_PATH" --fork --logpath="$LOG_PATH" --port="$DB_PORT" --pidfilepath="$PID_FILE_PATH"
 
 python setup.py build_ext -i
-python -m pytest -v --norecursedirs="test/*"
+echo "[pytest]\nnorecursedirs = test/*\n" > pytest.ini
+python -m pytest -v
 
 # Terminate the forked process after the test suite exits
 kill `cat $PID_FILE_PATH`
