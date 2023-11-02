@@ -22,16 +22,6 @@ mongod --dbpath="$DB_PATH" --fork --logpath="$LOG_PATH" --port="$DB_PORT" --pidf
 
 python setup.py build_ext -i
 
-# pytest.ini shim block
-if [ -f pytest.ini ]; then
-    echo "remove this block once pytest.ini is included"
-    exit 1
-fi
-cat << EOF > pytest.ini
-[pytest]
-norecursedirs = test/*
-EOF
-
 python -m pytest -v
 
 # Terminate the forked process after the test suite exits
