@@ -1,4 +1,4 @@
-{% set version = "4.6.3" %}
+{% set version = "4.7.0" %}
 
 package:
   name: pymongo
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymongo/pymongo-{{ version }}.tar.gz
-  sha256: 400074090b9a631f120b42c61b222fd743490c133a5d2f99c0208cefcccc964e
+  sha256: 431093ef808944a14698b2a719b739fa7721778769e80c08423568991aa29c42
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
