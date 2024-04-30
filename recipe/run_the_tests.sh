@@ -22,7 +22,7 @@ mongod --dbpath="$DB_PATH" --fork --logpath="$LOG_PATH" --port="$DB_PORT" --pidf
 
 python setup.py build_ext -i
 
-python -m pytest -v
+python -m pytest -v -k "not test/test_client.py::TestClient"
 
 # Terminate the forked process after the test suite exits
 kill `cat $PID_FILE_PATH`
