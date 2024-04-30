@@ -1,4 +1,4 @@
-{% set version = "4.7.0" %}
+{% set version = "4.7.1" %}
 
 package:
   name: pymongo
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymongo/pymongo-{{ version }}.tar.gz
-  sha256: 431093ef808944a14698b2a719b739fa7721778769e80c08423568991aa29c42
+  sha256: 811c41c6227b7548afcb53e1b996c25262d837b5e5f519e2ddc2c7e59d8728a5
 
 build:
   number: 0
