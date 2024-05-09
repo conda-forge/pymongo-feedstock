@@ -1,4 +1,4 @@
-{% set version = "4.7.1" %}
+{% set version = "4.7.2" %}
 
 package:
   name: pymongo
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymongo/pymongo-{{ version }}.tar.gz
-  sha256: 811c41c6227b7548afcb53e1b996c25262d837b5e5f519e2ddc2c7e59d8728a5
+  sha256: 9024e1661c6e40acf468177bf90ce924d1bc681d2b244adda3ed7b2f4c4d17d7
 
 build:
   number: 0
@@ -56,6 +56,7 @@ about:
   license: Apache-2.0
   license_file: LICENSE
   summary: Python driver for MongoDB http://www.mongodb.org
+  dev_url: https://github.com/mongodb/mongo-python-driver
 
 extra:
   recipe-maintainers:
