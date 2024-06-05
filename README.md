@@ -9,6 +9,8 @@ Package license: Apache-2.0
 
 Summary: Python driver for MongoDB http://www.mongodb.org
 
+Development: https://github.com/mongodb/mongo-python-driver
+
 Current build status
 ====================
 
