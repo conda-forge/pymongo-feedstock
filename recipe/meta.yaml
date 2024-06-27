@@ -1,4 +1,4 @@
-{% set version = "4.7.3" %}
+{% set version = "4.8.0" %}
 
 package:
   name: pymongo
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymongo/pymongo-{{ version }}.tar.gz
-  sha256: 6354a66b228f2cd399be7429685fb68e07f19110a3679782ecb4fdb68da03831
+  sha256: 454f2295875744dc70f1881e4b2eb99cdad008a33574bc8aaf120530f66c0cde
 
 build:
   number: 0
-  script: python -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
   # Three tests seem to fail on PPC64LE and PyPy
   # test_monitoring test_gridfs_spec test_legacy_api
   script_env:
@@ -25,12 +25,14 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
+    - hatch-requirements-txt >=0.4.1
+    - hatchling >=1.24
+    - setuptools
     - python
     - pip
-    - setuptools >=63.0
   run:
     - python
-    - dnspython >=1.16.0,<3.0.0
+    - dnspython <3.0.0,>=1.16.0
 
 test:
   source_files:
