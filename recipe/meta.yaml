@@ -24,10 +24,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
+    - hatch-requirements-txt >=0.4.1
+    - hatchling >1.24
   host:
     - python
     - pip
-    - setuptools >=63.0
   run:
     - python
     - dnspython <3.0.0,>=1.16.0
