@@ -10,7 +10,7 @@ source:
 
 build:
   number: 0
-  script: python -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
   # Three tests seem to fail on PPC64LE and PyPy
   # test_monitoring test_gridfs_spec test_legacy_api
   script_env:
@@ -27,6 +27,7 @@ requirements:
     - pip
     - hatch-requirements-txt >=0.4.1
     - hatchling >1.24
+    - setuptools
   host:
     - python
     - pip
