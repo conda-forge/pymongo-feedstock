@@ -46,7 +46,8 @@ test:
   requires:
     - mongodb     # [not win]
     - setuptools  # [not win]
-    - pytest
+    - pytest >=8.2
+    - pytest-asyncio >=0.24.0
     - mockupdb
     - pip
   commands:
