@@ -26,13 +26,13 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - hatch-requirements-txt >=0.4.1
-    - hatchling >=1.24
-    - setuptools
+    - hatchling >1.24
+    - setuptools >=65.0
     - python
     - pip
   run:
     - python
-    - dnspython <3.0.0,>=1.16.0
+    - dnspython >=1.16.0,<3.0.0
 
 test:
   source_files:
