@@ -28,7 +28,7 @@ requirements:
   host:
     - python
     - pip
-    - setuptools <72
+    - setuptools
   run:
     - python
 
@@ -42,8 +42,8 @@ test:
     - gridfs
     - pymongo
   requires:
-    - mongodb     # [not win]
-    - setuptools  # [not win]
+    - mongodb         # [not win]
+    - setuptools <72  # [not win]
     - pip
   commands:
     - bash run_the_tests.sh  # [unix and not (ppc64le or python_impl=='pypy')]
