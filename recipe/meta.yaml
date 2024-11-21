@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymongo-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pymongo-{{ version }}.tar.gz
   sha256: e22d6cf5802cd09b674c307cc9e03870b8c37c503ebec3d25b86f2ce8c535dc7
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   # Three tests seem to fail on PPC64LE and PyPy
   # test_monitoring test_gridfs_spec test_legacy_api
@@ -24,6 +24,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
@@ -41,8 +42,8 @@ test:
     - gridfs
     - pymongo
   requires:
-    - mongodb     # [not win]
-    - setuptools  # [not win]
+    - mongodb         # [not win]
+    - setuptools <72  # [not win]
     - pip
   commands:
     - bash run_the_tests.sh  # [unix and not (ppc64le or python_impl=='pypy')]
