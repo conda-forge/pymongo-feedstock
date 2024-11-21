@@ -28,7 +28,7 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
+    - setuptools <72
   run:
     - python
 
