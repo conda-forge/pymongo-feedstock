@@ -1,4 +1,4 @@
-{% set version = "4.15.3" %}
+{% set version = "4.15.4" %}
 
 package:
   name: pymongo
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pymongo/pymongo-{{ version }}.tar.gz
-  sha256: 7a981271347623b5319932796690c2d301668ac3a1965974ac9f5c3b8a22cea5
+  sha256: 6ba7cdf46f03f406f77969a8081cfb659af16c0eee26b79a0a14e25f6c00827b
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
   # Three tests seem to fail on PPC64LE and PyPy
   # test_monitoring test_gridfs_spec test_legacy_api
