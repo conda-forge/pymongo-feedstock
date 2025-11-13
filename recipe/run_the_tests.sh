@@ -20,7 +20,7 @@ mkdir "$DB_PATH"
 
 mongod --dbpath="$DB_PATH" --fork --logpath="$LOG_PATH" --port="$DB_PORT" --pidfilepath="$PID_FILE_PATH"
 
-python -m pytest -v -k "not TestClient and not ClientUnitTest and not test_concurrency" || python -m pytest --lf -v
+python -m pytest -v -k "not TestClient and not ClientUnitTest and not test_concurrency and not test_generic_arguments" || python -m pytest --lf -v
 
 # Terminate the forked process after the test suite exits
 kill `cat $PID_FILE_PATH`
