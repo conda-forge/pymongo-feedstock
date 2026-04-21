@@ -369,9 +369,14 @@ Feedstock Maintainers
 
 * [@CJ-Wright](https://github.com/CJ-Wright/)
 * [@ShaneHarvey](https://github.com/ShaneHarvey/)
+* [@aclark4life](https://github.com/aclark4life/)
 * [@blink1073](https://github.com/blink1073/)
+* [@caseyclements](https://github.com/caseyclements/)
 * [@jan-janssen](https://github.com/jan-janssen/)
+* [@jibola](https://github.com/jibola/)
 * [@licode](https://github.com/licode/)
+* [@noahstapp](https://github.com/noahstapp/)
+* [@sleepystick](https://github.com/sleepystick/)
 * [@tacaswell](https://github.com/tacaswell/)
 * [@xylar](https://github.com/xylar/)
 
