@@ -1,12 +1,12 @@
-{% set version = "4.17.0" %}
+{% set version = "4.18.0" %}
 
 package:
   name: pymongo
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/pymongo/pymongo-{{ version }}.tar.gz
-  sha256: 70ffa08ba641468cc068cf46c06b34f01a8ce3489f6411309fcb5ceabe6b2fc0
+  url: https://files.pythonhosted.org/packages/source/p/pymongo/pymongo-{{ version }}.tar.gz
+  sha256: 6f33cd2033e8ea216d3069b5ebea79ded74ef2a93f69a93b26cf310082f9b5b9
 
 build:
   number: 0
@@ -32,7 +32,7 @@ requirements:
     - pip
   run:
     - python
-    - dnspython <3.0.0,>=2.6.1
+    - dnspython <3.0.0,>=2.7.0
 
 test:
   source_files:
