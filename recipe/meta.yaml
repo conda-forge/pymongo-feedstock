@@ -44,7 +44,7 @@ test:
     - gridfs
     - pymongo
   requires:
-    - mongodb     # [not win]
+    - mongodb     # [linux]
     - setuptools  # [not win]
     - pytest >=8.2
     - pytest-asyncio >=0.24.0
