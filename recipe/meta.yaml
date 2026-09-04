@@ -44,7 +44,9 @@ test:
     - gridfs
     - pymongo
   requires:
-    - mongodb     # [not win]
+    # osx-64 mongodb >=8.0.23 ships an arm64-only mongod; pin <8 until fixed.
+    # See https://github.com/conda-forge/mongodb-feedstock/issues/121.
+    - mongodb <8  # [not win]
     - setuptools  # [not win]
     - pytest >=8.2
     - pytest-asyncio >=0.24.0
