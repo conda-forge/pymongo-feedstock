@@ -22,6 +22,7 @@ mkdir "$DB_PATH"
 # cannot run on an x86_64 macOS host ("Bad CPU type in executable"). On
 # macOS, download the upstream server tarball instead. On Linux, use the
 # conda-forge mongodb package from PATH.
+# See https://github.com/conda-forge/mongodb-feedstock/issues/121.
 if [ "$(uname -s)" = "Darwin" ]; then
     MONGO_VERSION=7.0.17
     case "$(uname -m)" in
