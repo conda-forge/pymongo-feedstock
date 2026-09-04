@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/pymongo/pymongo-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/p/pymongo/pymongo-{{ version }}.tar.gz
   sha256: 70ffa08ba641468cc068cf46c06b34f01a8ce3489f6411309fcb5ceabe6b2fc0
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
   # Three tests seem to fail on PPC64LE and PyPy
   # test_monitoring test_gridfs_spec test_legacy_api
