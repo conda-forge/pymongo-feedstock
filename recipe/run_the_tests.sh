@@ -2,19 +2,18 @@
 set -ex
 # We don't run on PPC64LE + PYPY the full tests due to legacy errors
 # https://github.com/conda-forge/pymongo-feedstock/pull/33
-# That said, I found it very hard to use the 
-# target_platform
-# and
-# python_impl
-# variables in the test section.
-# Therefore, we simply use the selector in the meta.yaml file.
+# The selector on this test lives in recipe.yaml.
 unset REQUESTS_CA_BUNDLE
 unset SSL_CERT_FILE
 
-export DB_PATH="$SRC_DIR/temp-mongo-db"
-export LOG_PATH="$SRC_DIR/mongolog"
+# rattler-build does not define SRC_DIR in the test environment, so use a
+# temporary directory for mongod's state instead.
+MONGO_TMP_DIR="$(mktemp -d)"
+
+export DB_PATH="${MONGO_TMP_DIR}/temp-mongo-db"
+export LOG_PATH="${MONGO_TMP_DIR}/mongolog"
 export DB_PORT=27272
-export PID_FILE_PATH="$SRC_DIR/mongopidfile"
+export PID_FILE_PATH="${MONGO_TMP_DIR}/mongopidfile"
 
 mkdir "$DB_PATH"
 
