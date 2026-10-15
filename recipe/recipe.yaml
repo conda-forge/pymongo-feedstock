@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pymongo
-  version: 4.18.3
+  version: 4.19.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 5dd6e659b6014288a1c53458929402a58f44a032e6f29bcef44e7477c5268e48
+  sha256: 3c510dd3c5d9b392d3b33bb5d2a594758acfe8f026fca654253f947ce0af9d40
 
 build:
   number: 0
