@@ -33,7 +33,7 @@ requirements:
     - hatch-requirements-txt >=0.4.1
   run:
     - python
-    - dnspython <3.0.0,>=2.7.0
+    - dnspython >=2.7.0,<3.0.0
 tests:
   - python:
       imports:
