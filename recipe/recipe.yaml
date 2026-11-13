@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pymongo
-  version: 4.19.0
+  version: 4.20.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 3c510dd3c5d9b392d3b33bb5d2a594758acfe8f026fca654253f947ce0af9d40
+  sha256: f773b0aec28687587cdeda490463a82debc4566a4a3620dcc8dada9d2c0a1acd
 
 build:
   number: 0
@@ -33,7 +33,7 @@ requirements:
     - hatch-requirements-txt >=0.4.1
   run:
     - python
-    - dnspython >=2.7.0,<3.0.0
+    - dnspython <3.0.0,>=2.7.0
 tests:
   - python:
       imports:
